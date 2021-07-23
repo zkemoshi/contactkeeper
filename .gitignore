@@ -145,6 +145,7 @@ Copied
 /client/.env.development.local
 /client/.env.test.local
 /client/.env.production.local
+config
 
 npm-debug.log*
 yarn-debug.log*
