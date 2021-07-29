@@ -6,7 +6,7 @@ const ContactItem = ({ contact }) => {
   const contactContext = useContext(ContactContext);
 
   const { deleteContact, setCurrent } = contactContext;
-  const { id, name, email, phone, type } = contact;
+  const { _id, name, email, phone, type } = contact;
 
   return (
     <div className='card bg-light'>
@@ -45,7 +45,7 @@ const ContactItem = ({ contact }) => {
         </button>
         <button
           className='btn btn-danger btn-sm'
-          onClick={() => deleteContact(id)}
+          onClick={() => deleteContact(_id)}
         >
           Delete
         </button>

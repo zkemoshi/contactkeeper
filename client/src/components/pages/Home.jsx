@@ -2,13 +2,11 @@ import React, { useContext, useEffect } from 'react';
 import Contacts from '../contacts/Contacts';
 import ContactForm from '../contacts/ContactForm';
 import ContactFilter from '../contacts/ContactFilter';
-import ContactContext from '../../context/contact/contactContext';
 import AuthContext from '../../context/auth/authContext';
 
 const Home = () => {
   const authContext = useContext(AuthContext);
-  const contactContext = useContext(ContactContext);
-  const { contacts } = contactContext;
+ 
   const { loadUser } = authContext;
 
   useEffect(() => {
@@ -22,7 +20,7 @@ const Home = () => {
         <ContactForm />
       </div>
       <div>
-        {contacts.length !== 0 && <ContactFilter />}
+        <ContactFilter />
         <Contacts />
       </div>
     </div>
